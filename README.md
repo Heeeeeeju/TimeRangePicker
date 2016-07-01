@@ -4,27 +4,27 @@
 This library provides a dialog which has two taps, from(start) time and to(end) time
 
 ## Sample Example
-“`
-dialog = new DialogTimeRangePicker(MainActivity.this);
-dialog.show();
-dialog.setVisibleTo(true);
-dialog.setTimeFrom(5, 0);
-dialog.setTimeTo(6, 30);
-dialog.setConfirmListener(new DialogTimeRangePicker.onConfirmListener() {
-	@Override
-	public void confirmEvent(int fromHour, int fromMin, int toHour, int toMin) {
-		Toast.makeText(getApplicationContext(),
-				String.format("%02d:%02d ~ %02d:%02d", fromHour, fromMin, toHour, toMin),
-				Toast.LENGTH_SHORT).show();
-	}
-});
+
+    dialog = new DialogTimeRangePicker(MainActivity.this);
+    dialog.show();
+    dialog.setVisibleTo(true);
+    dialog.setTimeFrom(5, 0);
+    dialog.setTimeTo(6, 30);
+    dialog.setConfirmListener(new DialogTimeRangePicker.onConfirmListener() {
+	    @Override
+	    public void confirmEvent(int fromHour, int fromMin, int toHour, int toMin) {
+	    	Toast.makeText(getApplicationContext(),
+		    		String.format("%02d:%02d ~ %02d:%02d", fromHour, fromMin, toHour, toMin),
+			    	Toast.LENGTH_SHORT).show();
+	    }
+    });
 
 ## Sample Result
 ![alt tag](https://github.com/Heeeeeeju/TimeRangePicker/blob/master/SampleImage/500.jpg)
 ![alt tag](https://github.com/Heeeeeeju/TimeRangePicker/blob/master/SampleImage/630.jpg)
 
 ## License
-“`
+
 Copyright 2016 Heeeeeeju (TimeRangePicker)
 
 Licensed under the Apache License, Version 2.0 (the "License");
