@@ -107,7 +107,7 @@ public class DialogTimeRangePicker extends Dialog {
      * @param visible   time picker 'to' visible
      */
     public void setVisibleTo(boolean visible) {
-        setButtonColor(false);
+        setButtonColor(!visible);
         if (visible) {
             pickerFrom.setVisibility(View.INVISIBLE);
             pickerTo.setVisibility(View.VISIBLE);
