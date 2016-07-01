@@ -3,6 +3,17 @@
 ## Description
 This library provides a dialog which has two taps, from(start) time and to(end) time
 
+## Include in your project
+
+    repositories {
+    	maven {
+    		url  "http://dl.bintray.com/heeeeeeju/maven"
+    	}
+    }
+    dependencies {
+    	compile 'com.kwoak.dev.timerangepicker:time-range-picker:0.1.1'
+    }
+
 ## Sample Example
 
     dialog = new DialogTimeRangePicker(MainActivity.this);
