@@ -5,6 +5,8 @@ This library provides a dialog which has two taps, from(start) time and to(end) 
 
 ## Include in your project
 
+Add this in your build.gradle
+
     repositories {
     	maven {
     		url  "http://dl.bintray.com/heeeeeeju/maven"
