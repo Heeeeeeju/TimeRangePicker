@@ -13,7 +13,7 @@ Add this in your build.gradle
     	}
     }
     dependencies {
-    	compile 'com.kwoak.dev.timerangepicker:time-range-picker:0.1.1'
+    	compile 'com.kwoak.dev.timerangepicker:time-range-picker:0.1.3'
     }
 
 ## Sample Example
