@@ -10,10 +10,10 @@ buildscript {
     }
 }
 publish {
-    userOrg = 'Heeeeeeju'
+    userOrg = 'heeeeeeju'
     groupId = 'com.kwoak.dev.timerangepicker'
-    artifactId = 'TimeRangePicker'
-    publishVersion = '0.1.0'
+    artifactId = 'time-range-picker'
+    publishVersion = '0.1.2'
     desc = '-'
     website = 'https://github.com/Heeeeeeju/TimeRangePicker'
 }

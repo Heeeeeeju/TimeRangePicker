@@ -2,6 +2,7 @@ package com.kwoak.dev.timerangepicker;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,9 @@ import java.util.Calendar;
  * Created by HEEJU on 2016-06-30.
  */
 public class DialogTimeRangePicker extends Dialog {
+
+    int nonClickedBackground = Color.rgb(255, 255, 255);
+    int clickedBackground = Color.rgb(210, 210, 210);
 
     TextView buttonFrom;
     TextView buttonTo;
@@ -98,6 +102,31 @@ public class DialogTimeRangePicker extends Dialog {
         }
     }
 
+    /**
+     * if you want to see time picker 'to' first use this with parameter true
+     * @param visible   time picker 'to' visible
+     */
+    public void setVisibleTo(boolean visible) {
+        setButtonColor(false);
+        if (visible) {
+            pickerFrom.setVisibility(View.INVISIBLE);
+            pickerTo.setVisibility(View.VISIBLE);
+        } else {
+            pickerFrom.setVisibility(View.VISIBLE);
+            pickerTo.setVisibility(View.INVISIBLE);
+        }
+    }
+
+    public void setButtonColor(boolean fromClicked) {
+        if (fromClicked) {
+            buttonFrom.setBackgroundColor(clickedBackground);
+            buttonTo.setBackgroundColor(nonClickedBackground);
+        } else {
+            buttonFrom.setBackgroundColor(nonClickedBackground);
+            buttonTo.setBackgroundColor(clickedBackground);
+        }
+    }
+
     public interface onConfirmListener {
         /**
          *
@@ -153,6 +182,7 @@ public class DialogTimeRangePicker extends Dialog {
         buttonFrom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                setButtonColor(true);
                 pickerFrom.setVisibility(View.VISIBLE);
                 pickerTo.setVisibility(View.INVISIBLE);
             }
@@ -162,10 +192,13 @@ public class DialogTimeRangePicker extends Dialog {
         buttonTo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                setButtonColor(false);
                 pickerFrom.setVisibility(View.INVISIBLE);
                 pickerTo.setVisibility(View.VISIBLE);
             }
         });
+
+        setButtonColor(true);
 
         pickerFrom = (TimePicker) findViewById(R.id.container_picker_from);
         pickerTo = (TimePicker) findViewById(R.id.container_picker_to);

@@ -18,13 +18,14 @@ public class MainActivity extends Activity {
 
         dialog = new DialogTimeRangePicker(MainActivity.this);
         dialog.show();
+        dialog.setVisibleTo(true);
         dialog.setTimeFrom(5, 0);
         dialog.setTimeTo(6, 30);
         dialog.setConfirmListener(new DialogTimeRangePicker.onConfirmListener() {
             @Override
             public void confirmEvent(int fromHour, int fromMin, int toHour, int toMin) {
                 Toast.makeText(getApplicationContext(),
-                        String.format("%d시간%d분 ~ %d시간%d분", fromHour, fromMin, toHour, toMin),
+                        String.format("%02d:%02d ~ %02d:%02d", fromHour, fromMin, toHour, toMin),
                         Toast.LENGTH_SHORT).show();
             }
         });

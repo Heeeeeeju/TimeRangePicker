@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,8 +16,10 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
+            android:background="#FFF"
             android:text="From"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:textColor="@android:color/black"/>
 
         <!-- divider -->
         <View
@@ -30,8 +33,10 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
+            android:background="#FFF"
             android:text="To"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:textColor="@android:color/black"/>
 
     </LinearLayout>
 
@@ -42,13 +47,15 @@
         <TimePicker
             android:id="@+id/container_picker_from"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"/>
 
         <TimePicker
             android:id="@+id/container_picker_to"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="invisible"/>
+            android:visibility="invisible"
+            android:background="@android:color/white"/>
 
     </FrameLayout>
 
@@ -70,8 +77,10 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
+            android:background="#FFF"
             android:text="Cancel"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:textColor="@android:color/black"/>
 
         <!-- divider -->
         <View
@@ -85,8 +94,10 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
+            android:background="#FFF"
             android:text="OK"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:textColor="@android:color/black"/>
 
     </LinearLayout>
 
