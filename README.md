@@ -2,19 +2,13 @@
 
 ## Description
 This library provides a dialog which has two taps, from(start) time and to(end) time
+Latest version : 0.1.3
 
 ## Include in your project
 
-Add this in your build.gradle
+Just add this line in your build.gradle - dependencies
 
-    repositories {
-    	maven {
-    		url  "http://dl.bintray.com/heeeeeeju/maven"
-    	}
-    }
-    dependencies {
-    	compile 'com.kwoak.dev.timerangepicker:time-range-picker:0.1.3'
-    }
+    compile 'com.kwoak.dev.timerangepicker:time-range-picker:0.1.3'
 
 ## Sample Example
 
